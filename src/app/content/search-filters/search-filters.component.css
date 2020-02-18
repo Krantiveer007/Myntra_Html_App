@@ -1,0 +1,135 @@
+.filterHeadings{
+    padding-bottom: 15px;
+    padding-left: 30px;
+}
+.filters{
+    border-top: 1px solid #e9e9ed;
+    border-right: 1px solid #e9e9ed;
+    position: sticky;
+    top: 0;
+}
+.filterOptions{
+    position: relative;
+    padding: 20px 0px 15px 25px!important;
+    border-bottom: 1px solid #e9e9ed;
+}
+.filterHeading{
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #282c3f;
+    width: 100%;
+    margin-bottom: 10px!important;
+}
+.searchIcon {
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    background-color: #f5f5f6;
+    padding: 2px;
+    border: 1px solid #f5f5f6;
+    border-radius: 50%;
+}
+.filterContent{
+    display: block;
+    margin-bottom: 5px;
+}
+.filterName{
+    margin-left: 15px;
+    font-size: 17px;
+    color: #282c3f;
+}
+.colorDesc{
+    height: 20px;
+    display: inline-block;
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.container {
+    display: block;
+    position: relative;
+    margin-bottom: 0px;
+    cursor: pointer;
+    width: auto;
+    font-size: 15px;
+    font-family: 'Neuzeit Grotesk Regular';
+    color: #20242b;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 0;
+    margin: 0;
+    margin-right: 20px;
+  }
+  .externalContact{
+    margin-left: -14px!important;
+    padding-left: 0px!important;
+  }
+  .containerHighlight{
+    font-weight: bold;
+  }
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 6px;
+    left: 40%;
+    height: 20px;
+    border: 1px solid #979da6;
+    width: 20px;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+  
+input[type="radio"]:disabled + span {
+  background-color: #eeeff0!important;
+}
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  .container input:checked ~ .checkmark {
+    font-weight: bold;
+  }
+
+  /* When the radio button is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #ffffff;
+    border: 1px solid #ff3f6c;
+  }
+
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+    top: 3px;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ff3f6c;
+  }
+  .filterContainerBrand,
+  .filterContainerColor{
+    height: 242px;
+    overflow-y: hidden;
+  }
+  button{
+    margin-left: 25%;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #ff3f6c;
+    background: transparent;
+  }

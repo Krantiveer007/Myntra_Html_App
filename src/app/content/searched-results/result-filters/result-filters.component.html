@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-8">
+        <div [ngClass]="{'itemTypeContainer' : isExpanded}">
+            <button type="button" class="btn btn-secondary" *ngFor="let type of objectKeys(itemTypes)"
+                (click)="onTypeSelect(type)">
+                {{type}}
+                <fa-icon [icon]="faAngleDown" *ngIf="itemTypes[type]!==itemSubtypes"></fa-icon>
+                <fa-icon [icon]="faAngleUp" *ngIf="itemTypes[type]===itemSubtypes"></fa-icon>
+            </button>
+        </div>
+        <div class="itemSubTypeContainer">
+            <div class="itemSubTypes" *ngFor="let subtype of itemSubtypes">
+                <input type="checkbox" class="filterSelectionChecbox" style="margin-right: 10px;"
+                    [checked]="false">{{subtype}}</div>
+        </div>
+        <button type="button" class="btn noOfItemTypes" (click)="isExpanded = !isExpanded"> +
+            {{objectKeys(itemTypes).length}} more</button>
+    </div>
+    <div class="col-4 container">
+        <div class="sortList">
+            <div class="selectedSortParam" (mouseenter)="isExpandedDropDown=true" (mouseleave)="isExpandedDropDown=false">
+                Sort by:
+                <span style="font-weight: bold;"> {{selectedVal}}</span>
+                <fa-icon [icon]="faAngleDown"></fa-icon>
+            </div>
+            <ul *ngIf="isExpandedDropDown">
+                <li (click)="onChange(sortFilter)" *ngFor="let sortFilter of sortFilters">{{sortFilter}}</li>
+            </ul>
+        </div>
+    </div>
+</div>

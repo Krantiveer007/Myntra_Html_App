@@ -1,0 +1,21 @@
+.app-container {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: #f7f7f8;
+  overflow-y: scroll;
+  /* font-family: Neuzeit Grotesk Regular; */
+}
+
+.app-header {
+  height: 120px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.app-content {
+  height: calc(100% - 120px);
+  width: 100%;
+}

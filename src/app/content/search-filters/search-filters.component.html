@@ -1,0 +1,31 @@
+<h5 class="filterHeadings"> FILTERS </h5>
+<div class="filters">
+    <div class="row filterOptions" *ngFor="let filter of objectKeys(filters)">
+        <div class="row filterHeading">
+            <span style="font-weight: bold; left: 0;">{{filter}}</span>
+            <div style="margin-left: auto; margin-right: 20px;">
+                <img src="{{searchIcon}}" class="searchIcon" *ngIf="filter === 'Brand' || filter === 'Color'">
+            </div>
+        </div>
+        <div class="row" style="display: block">
+            <div [ngClass]="{'filterContainerBrand' : (isExpandedBrand && filter === 'Brand'),
+            'filterContainerColor':  (isExpandedColor && filter === 'Color')}">
+                <div class="filterContent" [ngStyle]="{'display' : filter === 'Discount Range' ? 'flex' : 'block'}"
+                    *ngFor="let item of filters[filter]">
+                    <input type="checkbox" class="filterSelectionChecbox" [checked]="false"
+                        *ngIf="filter !== 'Discount Range'">
+                    <label class="container" *ngIf="filter === 'Discount Range'">
+                        <input type="radio" name="item" [checked]="false" style="display:none;" [disabled]="false">
+                        <span class="checkmark"></span>
+                    </label>
+                    <span class="filterName">
+                        <span class="colorDesc" [ngStyle]="colorStyling(item)" *ngIf="filter === 'Color'"></span>
+                        {{(filter !== 'Discount Range') ? item : item + '% and above'}}
+                    </span>
+                </div>
+            </div>
+            <button type="button" *ngIf="filter === 'Brand' || filter === 'Color'" (click)="onClickExpand(filter)"> +
+                {{filters[filter].length}} more</button>
+        </div>
+    </div>
+</div>

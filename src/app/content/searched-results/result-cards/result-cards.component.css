@@ -1,0 +1,80 @@
+.card-deck {
+    margin: 0;
+}
+.card-deck > .card{
+    width: 250px;
+    flex-wrap: wrap;
+    flex: initial;
+    column-gap: 50px;
+    margin-right: 35px;
+    margin-left: 35px;
+    margin-bottom: 20px;
+}
+.card{
+    border:none;
+    border-radius: 0;
+    width: 320px;
+    /*display: -webkit-inline-box;*/
+    display: flex!important
+    }
+.card-body{
+    text-align: left;
+    width: inherit;
+    color: #101215;
+    padding: 10px;
+}
+.card-title{
+    margin: 0;
+}
+.card-footer{
+    background: transparent;
+    display: flex;
+    border: none;
+    padding: 0px 10px;
+}
+.card-body:focus, .card-body:active{
+    border-color: 1px solid #006193!important;
+    box-shadow: 0 0 5px 0 #006193!important;
+    background-color: #077ca0!important;
+}
+.card:hover, .card-body:hover{
+    background-color: #ecf9fd!important;
+    border-color: 1px solid #ecf9fd!important;
+}
+.text-discountedPrice{
+    font-size: 16px;
+    color: #282c3f;
+    font-weight: bold;
+}
+.text-actualPrice{
+    text-decoration: line-through;
+    color: #7e818c;
+    font-weight: 400;
+    margin-left: 5px;
+    font-size: 14px;
+}
+.text-discountOffered{
+    color: #ff905a;
+    font-weight: 400;
+    font-size: 14px;
+    margin-left: 5px;
+}
+.addToBagBtn{
+    color: #ffffff!important;
+    background-color: #ff3f6c!important;
+    border: 1px solid #ff3f6c!important;
+    height: 40px;
+    border-radius: 2px;
+    padding: 5px 10px;
+    width: fit-content;
+}
+.wishlistBtn{
+    color: #000000!important;
+    border: 1px solid #000000!important;
+    background-color: #ffffff!important;
+    height: 40px;
+    margin-left: 20px;
+    border-radius: 2px;
+    padding: 5px 10px;
+    width: fit-content;
+}

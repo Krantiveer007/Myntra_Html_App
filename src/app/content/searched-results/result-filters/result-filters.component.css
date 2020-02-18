@@ -1,0 +1,74 @@
+.btn{
+    color: #282c3f;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    border-radius: 20px;
+}
+.btn:hover,
+.btn:focus,
+.btn:active{
+    background-color: #f4f4f5;
+    outline: 0;
+    box-shadow: none;
+}
+.ng-fa-icon {
+    color: #94969f;
+    margin-left: 10px;
+}
+ul {
+    padding: 0;
+    border-radius: 2px;
+    background-color: #fff;
+    border: 1px solid #d4d5d9;
+    border-top: none;
+}
+li{
+    display: block;
+    cursor: pointer;
+    padding: 10px 50px 10px 15px;
+}
+li:hover{
+    background-color: #d4d5d9;
+}
+.selectedSortParam{
+    padding: 9px 14px;
+    font-size: 16px;
+    color: #282c3f;
+    cursor: pointer;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 2px;
+    background-color: #fff;
+    border: 1px solid #d4d5d9;
+}
+/* .filterDropDown {
+    padding: 9px 14px;
+    height: 40px;
+    width: 100%;
+    font-size: 14px;
+    color: #282c3f;
+    cursor: pointer;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #d4d5d9;
+} */
+
+.noOfItemTypes{
+    font-weight: bold;
+    padding-top: 0;
+}
+.itemTypeContainer {
+    height: 80px;
+    overflow-y: hidden;
+}
+.itemSubTypeContainer{
+    display: flex;
+}
+.itemSubTypes{
+    margin-left:10px;
+}

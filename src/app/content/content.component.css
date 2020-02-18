@@ -1,0 +1,135 @@
+.app-content {
+  width: inherit;
+  background: #ffffff;
+  display: block;
+}
+
+.app-footer {
+  width: inherit;
+}
+
+.navLinksHeading a {
+  text-decoration: none;
+  color: #282c3f;
+  font-size: 15px;
+}
+
+.searchedItemTitle {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.searchedItemCount {
+  color: #878b94;
+  font-size: 16px
+}
+
+/* .navLinksHeading a:after {
+  content: "/";
+  margin-left: 3px;
+  margin-right: 3px;
+} */
+
+
+.modal-dialog {
+  top: 4% !important;
+  bottom: 0;
+}
+
+:host>>>.modal-content {
+  height: 100%;
+  background-color: #fde3f3!important;
+}
+
+.modal-header,
+.modal-footer,
+.modal-body {
+  padding: 20px;
+}
+
+.modal-header {
+  border-bottom: 1px solid #b9bdc4;
+  height: 8%;
+}
+
+.modal-body {
+  height: 82%;
+}
+
+.modal-footer {
+  height: 10%;
+  font-weight: bold;
+}
+
+.modal-title {
+  height: 22px;
+  font-size: 22px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #101215;
+}
+
+.signUpBtn {
+  background-color: #ff3f6c !important;
+  color: #ffffff;
+  height: 50px;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+
+.discountInfo {
+  position: absolute;
+  width: 50px;
+  color: black;
+  right: 17px;
+  position: fixed;
+  width: 50px;
+  height: 200px;
+  text-align: center;
+  background-color: #535766;
+  z-index: 6;
+  color: #fff;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.discountArrow {
+  width: 0;
+  height: 0;
+  margin: 24px 16px;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+}
+
+.ng-fa-icon{
+  font-size: 25px;
+}
+.discountLabel {
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  width: 36px;
+  padding: 4px;
+  height: 201px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  -webkit-margin-after: 0;
+  margin-block-end: 0;
+  -webkit-margin-before: 0;
+  margin-block-start: 0;
+  color: #fcfcfc;
+  display: inline-block;
+}
+.genuineProduct{
+  margin-right: 20px;
+}
+.tryBuy{
+  margin-right: 7px;
+}

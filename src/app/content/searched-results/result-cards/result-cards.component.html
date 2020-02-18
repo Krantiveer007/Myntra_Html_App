@@ -1,0 +1,21 @@
+<div class="row" style="padding: 20px!important;">
+    <div class="card-deck">
+        <div class="card" (mouseenter)="results['showHidden']=true" (mouseleave)="results['showHidden']=false" *ngFor="let results of searchedResults">
+          <img class="card-img-top" src="{{results.src}}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title" *ngIf="!results['showHidden']">{{results.title}}</h5>
+            <p class="card-text" *ngIf="!results['showHidden']">{{results.itemDescription}}</p>
+            <div style="display: flex; margin-bottom: 10px; width: 100%" *ngIf="results['showHidden']">
+                <button type="button" class="addToBagBtn">ADD TO BAG</button>
+                <button type="button" class="wishlistBtn">WISHLIST</button>
+            </div>
+            <p class="card-text" *ngIf="results['showHidden']">Sizes : {{results.sizes}}</p>
+          </div>
+          <div class="card-footer">
+            <h6 class="text-discountedPrice"> Rs. {{results.discountedPrice}}</h6>
+            <p class="text-actualPrice"> Rs. {{results.actualPrice}}</p>
+            <p class="text-discountOffered"> ( {{results.dicountOffered}}% OFF)</p>
+          </div>
+        </div>
+      </div>
+</div>

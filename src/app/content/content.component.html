@@ -1,0 +1,79 @@
+<div class="row app-content" style="display: flex;">
+    <div class="col-12" style="padding:0">
+        <div class="row" style="padding-left: 30px!important; padding-top: 20px!important">
+            <div class='navLinksHeading'>
+                <a href="/{{item}}" [ngStyle]="{'font-weight': item === 'Men Tshirts' ? 'bold' : 'normal'}"
+                    *ngFor="let item of searchedItem">
+                    {{item}}
+                    <span *ngIf="item !== 'Men Tshirts'"> / </span>
+                </a>
+            </div>
+        </div>
+        <div class="row" style="padding-left: 30px!important; padding-top: 20px!important">
+            <span class="searchedItemTitle"> {{ searchedItem[searchedItem.length - 1] }} </span>
+            <span class="searchedItemCount"> {{ searchedItemCount }}</span>
+        </div>
+        <div class="row" style="padding-top: 20px!important;">
+            <div class="col-3 p-0">
+                <app-search-filters></app-search-filters>
+            </div>
+            <div class="col-9 p-0">
+                <app-searched-results></app-searched-results>
+            </div>
+        </div>
+    </div>
+    <div class="discountInfo" (click)="openDiscountInfo(discountOfferTemplate)">
+        <!-- <div class="discountArrow">
+            <fa-icon [icon]="faAngleLeft" *ngIf="!isDiscountShown"></fa-icon>
+            <fa-icon [icon]="faAngleRight" *ngIf="isDiscountShown"></fa-icon>
+        </div> -->
+        <p class="discountLabel">
+            GET R500 OFF*
+        </p>
+    </div>
+</div>
+<div class="row app-footer">
+    <app-footer class="app-footer" style="padding-top: 50px; padding-bottom: 50px;"></app-footer>
+</div>
+<ng-template #discountOfferTemplate>
+    <!-- <div class='modal-header'>
+      <h4 class='modal-title pull-left'>Distribution List</h4>
+      <img src='./assets/images/grey-600-copy-3.svg' style='width: 12px;height: 12px;color: #313740;cursor:pointer;margin-top: 5px;'
+        class='pull-right' (click)='checkForNewAttendeeEntry(templateNested)'>
+    </div> -->
+    <div class='modal-body'>
+        <div class="row" style="padding-bottom: 20px!important;">
+            <div class="col-7">
+                <h6>AVAIL UPTO</h6>
+                <h2>R500 OFF* + FREE SHIPPING</h2>
+            </div>
+            <div class="col-5">
+                <img src="{{couponIcon}}" class="couponOff">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7">
+                <h4 style="font-size: 16px; font-weight: bold;"> Coupon Code:
+                    <span style="font-size: 18px; font-weight: bold;">MYNTRANEWW500</span>
+                </h4>
+                <p>* Application on your first order</p>
+            </div>
+            <div class="col-5">
+                <button type="button" class="btn signUpBtn">Sign up now ></button>
+            </div>
+        </div>
+    </div>
+    <div class='modal-footer'>
+        <div class="genuineProduct">
+            <!-- <img src="genuineIcon"> -->
+            <span>Genuine Products</span>
+        </div>
+        <div class="tryBuy">
+            Try & Buy
+        </div>
+        <div class="easyReturns">
+            <!-- <img src="easyReturns"> -->
+            <span>Easy & Exchange & Returns</span>
+        </div>
+    </div>
+</ng-template>
